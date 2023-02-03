@@ -1,4 +1,5 @@
-Welcome to our JQM Adventure!
+<h1>Welcome to our JQM Adventure!</h1>
+
 First things first, let's get in sync with our partner and pick a tool to communicate. To keep things organized, each week one of us will be the "project leader" and make sure all the meetings and communications are on track. Then, we'll alternate the role every week. This team is meant to last for all future homeworks and projects, so let's make it count!
 
 But wait, what if our partner goes MIA? No worries! Just cc the instructor on all emails and they'll jump in to make sure everyone is pulling their weight.
