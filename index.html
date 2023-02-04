@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>First JQueryMobile Project</title>
+</head>
+<body>
+    
+    <!-- This is the first page -->
+    <section id="home" data-role="page">
+        <div data-role="header" data-theme='b'>
+            <h2>TechThreads</h2>
+            <div data-role="navbar" data-theme='b'>
+                <!-- /navbar -->
+                <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products-page">Products</a></li>
+                <li><a href="#cart">Cart</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>  
+        <div class="ui-content">
+            <h1>Welcome to TechThreads!</h1>
+            <p>We are the ultimate destination for tech enthusiasts looking for stylish and comfortable t-shirts that showcase their passion for technology. 
+            <p>Our collection of t-shirts feature designs inspired by the latest technology trends, popular tech brands, and iconic tech gadgets.
+            <p>Whether you're a programmer, gamer, or simply love all things tech, we've got you covered. 
+            <p>Our t-shirts are made from high-quality materials, ensuring they are comfortable to wear and durable enough to last.
+            <p>We are constantly updating our collection with new designs, so be sure to check back often to see what's new.
+            <p>Shop now and show the world your love for technology with a stylish and comfortable t-shirt from TechThreads!</p>
+            <p><a href="#products-page">Check out our T-Shirts!</a></p>
+        </div>
+        <div data-role="footer" data-theme='b'>
+            <h3>Copyrigtht 2023 by Kurt Friedrich</h3>
+        </div>
+    </section>
+
+    <!-- This is the second page -->
+    <section id="products-page" data-role="page">
+        <div data-role="header" data-theme='b'>
+            <h2>TechThreads</h2>
+            <div data-role="navbar" data-theme='b'>
+                <!-- /navbar -->
+                <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cart">Cart</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>    
+        <div class="ui-field-contain">
+            <input type="search" name="search" id="search" value="" placeholder="Search" onkeyup=search()/>
+        </div>
+        <!-- content -->
+        <div class="product-list" id="product-list">
+            <div class="product">
+                -Image goes here-
+                <img src="" alt="">
+                <div class="p-details">
+                    <h2>T-shirt number 1</h2>
+                    <h3>Price $</h3>
+                </div>
+            </div>
+            <div class="product">
+                -Image goes here-
+                <img src="" alt="">
+                <div class="p-details">
+                    <h2>T-shirt number 1</h2>
+                    <h3>Price $</h3>
+                </div>
+            </div>
+            <div class="product">
+                -Image goes here-
+                <img src="" alt="">
+                <div class="p-details">
+                    <h2>T-shirt number 1</h2>
+                    <h3>Price $</h3>
+                </div>
+            </div>
+            <div class="product">
+                -Image goes here-
+                <img src="" alt="">
+                <div class="p-details">
+                    <h2>T-shirt number 1</h2>
+                    <h3>Price $</h3>
+                </div>
+            </div>
+            <div class="product">
+                -Image goes here-
+                <img src="" alt="">
+                <div class="p-details">
+                    <h2>T-shirt number 1</h2>
+                    <h3>Price $</h3>
+                </div>
+            </div>
+        </div>
+          <!-- notes footer --> 
+          <div data-role="footer" data-theme='b'>
+            <h3>Copyrigtht 2023 by Kurt Friedrich</h3>
+        </div>
+        
+    </section>
+   
+
+    <!-- =================================== -->
+    <!-- This is the third page -->
+    <section id="cart" data-role="page">        
+        <!-- header --> 
+        <div data-role="header" data-theme='b'>
+            <h2>TechThreads</h2>
+            <div data-role="navbar" data-theme='b'>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#cart">Cart</a></li>
+                </ul>
+            </div><!-- /navbar -->
+
+        </div>
+        <div data-role="content" data-theme='e'>
+            Checkout content
+        </div>
+    
+        <!-- notes footer --> 
+        <div data-role="footer" data-theme='b'>
+            <h3>Copyrigtht 2023 by Kurt Friedrich</h3>
+        </div>
+    </section>
+     
+    <script src="main.js"></script>
+</body>
+</html>
