@@ -1,24 +1,24 @@
 const search = () => {
-    const searchbox = document.getElementById("search").ariaValueMax.toUpperCase();
-    const storeitems = document.getElementById("product-list")
+    const searchbox = document.getElementById("search").value.toUpperCase();
+    const storeitems = document.getElementsByClassName("product-list")
     const product = document.querySelectorAll(".product")
-    const pname = storeitems.getElementsByTagName("h2")
+    const pname = storeitems.getElementsByTagName("h4")
 
     for(var i=0; i < pname.length; i++) {
-        let match = product[i].getElementsByTagName('h2')[0];
+        let match = product[i].getElementsByTagName('h4')[0];
 
         if(match){
-            match.textContent || match.innerHTML
+            let textvalue = match.textContent || match.innerHTML
+                let textvalue: string
 
             if(textvalue.toUpperCase().indexOf(searchbox) > -1) {
-                product[1].getElementsByClassName.display = "";
+                product[i].style.display = "";
             }
             else {
-                product[1].getElementsByClassName.display = "none";
+                product[i].style.display = "none";
             }
 
         }
     }
-
 
 }
