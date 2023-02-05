@@ -1,3 +1,4 @@
+//----------------- Product search box --------------//
 const search = () => {
     const searchText = document.getElementById("search").value;
     const productDivs = document.querySelectorAll(".product");
@@ -14,3 +15,4 @@ const search = () => {
 
     });
 }
+//----------------- Product search box --------------//
