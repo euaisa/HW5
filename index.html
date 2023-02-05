@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
@@ -14,7 +15,7 @@
     
     <!-- This is the first page -->
     <section id="home" data-role="page">
-        <div data-role="header" data-theme='b'>
+        <div data-role="header" data-theme='b' id="header">
             <h2>TechThreads</h2>
             <div data-role="navbar" data-theme='b'>
                 <!-- /navbar -->
@@ -25,18 +26,15 @@
                 </ul>
             </div><!-- /navbar -->
         </div>  
+
         <div class="ui-content">
             <h1>Welcome to TechThreads!</h1>
-            <p>We are the ultimate destination for tech enthusiasts looking for stylish and comfortable t-shirts that showcase their passion for technology. 
-            <p>Our collection of t-shirts feature designs inspired by the latest technology trends, popular tech brands, and iconic tech gadgets.
-            <p>Whether you're a programmer, gamer, or simply love all things tech, we've got you covered. 
-            <p>Our t-shirts are made from high-quality materials, ensuring they are comfortable to wear and durable enough to last.
-            <p>We are constantly updating our collection with new designs, so be sure to check back often to see what's new.
-            <p>Shop now and show the world your love for technology with a stylish and comfortable t-shirt from TechThreads!</p>
-            <p><a href="#products-page">Check out our T-Shirts!</a></p>
+                <p>We are the ultimate destination for tech enthusiasts looking for 
+                stylish and comfortable t-shirts that showcase their passion for technology.</p> 
+                <p><a href="#products-page" class="btn">Shop now</a></p>
         </div>
         <div data-role="footer" data-theme='b'>
-            <h3>Copyrigtht 2023 by Kurt Friedrich</h3>
+            <h3>Copyrigtht 2023 by Exe & Isa</h3>
         </div>
     </section>
 
@@ -48,7 +46,7 @@
                 <!-- /navbar -->
                 <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
+                <li><a href="#products-page">Products</a></li>
                 <li><a href="#cart">Cart</a></li>
                 </ul>
             </div><!-- /navbar -->
@@ -59,44 +57,45 @@
         <!-- content -->
         <div class="product-list" id="product-list">
             <div class="product">
-                <a href="#"><img src="https://m.media-amazon.com/images/I/B1qmQK-r4OS._CLa%7C2140%2C2000%7C516PTr76wlL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UL1500_.png" width="200" height="200" alt="shirt1"></a>
+                <h1>Shop T-Shirts</h1>
+                <a href="#"><img src="tshirt1.jpeg" class="ui-responsive" alt="shirt1"></a>
                 <div class="p-details">
-                    <h4>"The science"</h4>
+                    <h4>The science</h4>
                     <h4>U$25.99</h4>
                 </div>
             </div>
             <div class="product">
-                <a href="#"><img src="https://th.bing.com/th/id/OIP.-PmtneO01emQybVg6Ko49gHaHP?pid=ImgDet&rs=1" width="200" height="200" alt="tshirt2"></a>
+                <a href="#"><img src="tshirt2.jpeg" class="ui-responsive" alt="tshirt2"></a>
                 <div class="p-details">
-                    <h4>"Superpower"</h4>
+                    <h4>Superpower</h4>
                     <h4>U$26.99</h4>
                 </div>
             </div>
             <div class="product">
-                <a href="#"><img src="https://i.pinimg.com/originals/83/90/2c/83902cdb95d2e8579be8d6e7e87a1897.jpg" width="200" height="200" alt="tshirt3"></a>
+                <a href="#"><img src="tshirt3.jpeg" class="ui-responsive" alt="tshirt3"></a>
                 <div class="p-details">
-                    <h4>"Label"</h4>
+                    <h4>Label</h4>
                     <h4>U$29.99</h4>
                 </div>
             </div>
             <div class="product">
-                <a href="#"><img src="https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C713BgJo1CjL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UL1500_.png" width="200" height="200" alt="tshirt4"></a>
+                <a href="#"><img src="tshirt4.jpeg" class="ui-responsive" alt="tshirt4"></a>
                 <div class="p-details">
-                    <h4>"Dictionary"</h4>
+                    <h4>Dictionary</h4>
                     <h4>U$26.99</h4>
                 </div>
             </div>
             <div class="product">
-                <a href="#"><img src="https://i.pinimg.com/736x/06/28/e1/0628e106b43038428db53ec2093a3601.jpg" width="200" height="200" alt="tshirt5"></a>
+                <a href="#"><img src="tshirt5.jpeg" class="ui-responsive" alt="tshirt5"></a>
                 <div class="p-details">
-                    <h4>"Technology"</h4>
+                    <h4>Technology</h4>
                     <h4>U$25.99</h4>
                 </div>
             </div>
         </div>
           <!-- notes footer --> 
           <div data-role="footer" data-theme='b'>
-            <h3>Copyrigtht 2023 by Kurt Friedrich</h3>
+            <h3>Copyrigtht 2023 by Exe & Isa</h3>
         </div>
         
     </section>
@@ -111,7 +110,7 @@
             <div data-role="navbar" data-theme='b'>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
+                    <li><a href="#products-page">Products</a></li>
                     <li><a href="#cart">Cart</a></li>
                 </ul>
             </div><!-- /navbar -->
@@ -123,7 +122,7 @@
     
         <!-- notes footer --> 
         <div data-role="footer" data-theme='b'>
-            <h3>Copyrigtht 2023 by Kurt Friedrich</h3>
+            <h3>Copyrigtht 2023 by Exe & Isa</h3>
         </div>
     </section>
      
