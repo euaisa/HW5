@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="cart.css"/>
+    <link rel="stylesheet" href="cart.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="cart.js" async></script>
 
     <title>First JQueryMobile Project</title>
 </head>
+
 <body>
-    
+
     <!-- This is the first page -->
     <section id="home" data-role="page">
         <div data-role="header" data-theme='b' id="header">
@@ -22,18 +24,18 @@
             <div data-role="navbar" data-theme='b'>
                 <!-- /navbar -->
                 <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products-page">Products</a></li>
-                <li><a href="#cart">Cart</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products-page">Products</a></li>
+                    <li><a href="#cart">Cart</a></li>
                 </ul>
             </div><!-- /navbar -->
-        </div>  
+        </div>
 
         <div class="ui-content">
             <h1>Welcome to TechThreads!</h1>
-                <p>We are the ultimate destination for tech enthusiasts looking for 
-                stylish and comfortable t-shirts that showcase their passion for technology.</p> 
-                <p><a href="#products-page" class="btn">Shop now</a></p>
+            <p>We are the ultimate destination for tech enthusiasts looking for
+                stylish and comfortable t-shirts that showcase their passion for technology.</p>
+            <p><a href="#products-page" class="btn">Shop now</a></p>
         </div>
         <div data-role="footer" data-theme='b'>
             <h3>Copyrigtht 2023 by Exe & Isa</h3>
@@ -47,12 +49,12 @@
             <div data-role="navbar" data-theme='b'>
                 <!-- /navbar -->
                 <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products-page">Products</a></li>
-                <li><a href="#cart">Cart</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products-page">Products</a></li>
+                    <li><a href="#cart">Cart</a></li>
                 </ul>
             </div><!-- /navbar -->
-        </div>    
+        </div>
         <div class="ui-field-contain">
             <input type="search" name="search" id="search" value="" placeholder="Search" onkeyup="search()">
         </div>
@@ -100,18 +102,18 @@
                 </div>
             </div>
         </div>
-          <!-- notes footer --> 
-          <div data-role="footer" data-theme='b'>
+        <!-- notes footer -->
+        <div data-role="footer" data-theme='b'>
             <h3>Copyrigtht 2023 by Exe & Isa</h3>
         </div>
-        
+
     </section>
-   
+
 
     <!-- =================================== -->
     <!-- This is the third page -->
-    <section id="cart" data-role="page">        
-        <!-- header --> 
+    <section id="cart" data-role="page">
+        <!-- header -->
         <div data-role="header" data-theme='b'>
             <h2>TechThreads</h2>
             <div data-role="navbar" data-theme='b'>
@@ -125,76 +127,29 @@
         </div>
         <div data-role="content" data-theme='e'>
             <h1>Shopping Cart</h1>
-        </header>
-        <section class="container content-section">
-            
-            <h2 class="section-header">Shirts</h2>
-            <div class="shop-items">
-                <div class="shop-item">
-                    <span class="shop-item-title">The science</span>
-                    <img class="shop-item-image" src="https://m.media-amazon.com/images/I/B1qmQK-r4OS._CLa%7C2140%2C2000%7C516PTr76wlL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UL1500_.png" width="200" height="200" alt="shirt1">
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">$25.99</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
+            <section class="container content-section">
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
                 </div>
-                <div class="shop-item">
-                    <span class="shop-item-title">Superpower</span>
-                    <img class="shop-item-image" src="https://th.bing.com/th/id/OIP.-PmtneO01emQybVg6Ko49gHaHP?pid=ImgDet&rs=1" width="200" height="200" alt="tshirt2">
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">$26.99</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
+                <div class="cart-items">
                 </div>
-                <div class="shop-item">
-                    <span class="shop-item-title">Label</span>
-                    <img class="shop-item-image" src="https://i.pinimg.com/originals/83/90/2c/83902cdb95d2e8579be8d6e7e87a1897.jpg" width="200" height="200" alt="tshirt3" width="200" height="200" alt="tshirt3">
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">$29.99</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$0</span>
                 </div>
-                <div class="shop-item">
-                    <span class="shop-item-title">Dictionary</span>
-                    <img class="shop-item-image" src="https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C713BgJo1CjL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UL1500_.png" width="200" height="200" alt="tshirt3" width="200" height="200" alt="tshirt4">
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">$26.99</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title">Technology</span>
-                    <img class="shop-item-image" src="https://i.pinimg.com/736x/06/28/e1/0628e106b43038428db53ec2093a3601.jpg" width="200" height="200" alt="tshirt3" width="200" height="200" alt="tshirt5">
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">$25.99</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="container content-section">
-            <h2 class="section-header">CART</h2>
-            <div class="cart-row">
-                <span class="cart-item cart-header cart-column">ITEM</span>
-                <span class="cart-price cart-header cart-column">PRICE</span>
-                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-            </div>
-            <div class="cart-items">
-            </div>
-            <div class="cart-total">
-                <strong class="cart-total-title">Total</strong>
-                <span class="cart-total-price">$0</span>
-            </div>
-            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
-        </section>
+                <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            </section>
         </div>
-    
-        <!-- notes footer --> 
+
+        <!-- notes footer -->
         <div data-role="footer" data-theme='b'>
             <h3>Copyrigtht 2023 by Exe & Isa</h3>
         </div>
     </section>
-     
+
     <script src="main.js"></script>
 </body>
+
 </html>
