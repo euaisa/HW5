@@ -4,7 +4,7 @@ const search = () => {
     const productDivs = document.querySelectorAll(".product");
 
     productDivs.forEach((productDiv) => {
-        let productName = productDiv.getElementsByTagName('h4')[0].textContent;
+        let productName = productDiv.querySelectorAll(".shop-item-title")[0].textContent;
 
         if (productName.toUpperCase().indexOf(searchText.toUpperCase()) > -1) {
             productDiv.style.display = "";
