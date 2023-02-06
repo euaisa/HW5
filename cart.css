@@ -124,7 +124,7 @@ html, body {
 .btn-play {
     display: block;
     margin: 0 auto;
-    color: #2D9CDB;
+    color: rgb(72, 133, 72);
     font-size: 4em;
     border-radius: 50%;
     width: 100px;
@@ -135,7 +135,7 @@ html, body {
 
 .btn-primary {
     color: white;
-    background-color: #56CCF2;
+    background-color: rgb(72, 133, 72);
     border: none;
     border-radius: .3em;
     font-weight: bold;
@@ -315,3 +315,4 @@ html, body {
     margin: 40px auto 80px auto;
     font-size: 1.75em;
 }
+
