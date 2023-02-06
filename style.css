@@ -7,6 +7,9 @@
   background-image: url(https://cdn.pixabay.com/photo/2016/10/26/15/20/graphics-1771704_960_720.jpg);
   background-size:contain;
   background-repeat: no-repeat;
+  background-position: right;
+  height: 200px;
+  background-color: black;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -77,6 +80,10 @@ h1 {
 
 #footer {
   background-color: rgb(72, 133, 72);
+  height: 50px;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
 }
 
 .p-details {
