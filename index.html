@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="cart.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="cart.js" async></script>
-
+    <script src="main.js" async></script>
     <title>First JQueryMobile Project</title>
 </head>
 
@@ -33,7 +32,7 @@
             </div><!-- /navbar -->
         </div>
 
-        <div class="ui-content">
+        <div data-role="main" class="ui-content" data-theme='e'>
             <h1>Welcome to TechThreads!</h1>
             <p>We are the ultimate destination for tech enthusiasts looking for
                 stylish and comfortable t-shirts that showcase their passion for technology.</p>
@@ -60,7 +59,7 @@
         </div>
 
         <!-- content -->
-        <div class="ui-field-contain">
+        <div data-role="main" class="ui-content" data-theme='e'>
         <h1>Shop T-Shirts</h1>
         <div class="product-list" id="product-list" data-filter="true" data-filter-placeholder="Search">
             <div class="product" >
@@ -168,8 +167,7 @@
                 </ul>
             </div><!-- /navbar -->
 
-        </div>
-        <div data-role="content" data-theme='e'>
+            <div data-role="main" class="ui-content" data-theme='e'>
             <h1>Shopping Cart</h1>
             <section class="container content-section">
                 <div class="cart-row">
@@ -212,29 +210,29 @@
         </div> <!-- /navbar -->
 
         
-        <div data-role="content" data-theme='e'>
+        <div data-role="main" class="ui-content" data-theme='e'>
             <h1>Leave a review</h1>
-            <div id="review-form">
-            <form>
+            <form id="reviewForm">
                 <div class="ui-field-contain">
                     <label for="name">Name:</label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="nameInput">
                 </div>
                 <div class="ui-field-contain">
                     <label for="review">Review:</label>
-                    <textarea name="review" id="review"></textarea>
+                    <textarea name="review" id="commentInput"></textarea>
                 </div>
                 <div class="ui-field-contain">
                     <label for="rating">Rating:</label>
-                    <input type="range" name="rating" id="rating" min="1" max="5">
-                </div>
-                <input type="submit" value="Submit Review">
-                </form>
-            </div>
+                    <input type="range" name="rating" id="ratingInput" min="1" max="5">
+                </div>              
+                <button id="displayButton">Submit Review</button>   
+            </form>
+         
+            
+            <br><h2>Product Reviews</h2>
+            <div id="reviewsContainer"></div>
 
-            <h2>Product Reviews</h2>
-            <div id="reviews-list">
-                <ul data-role="listview">
+            <ul data-role="listview">
                 <li>
                     <h3>John Doe</h3>
                     <p>This product is great! I highly recommend it.</p>
@@ -246,12 +244,8 @@
                     <p>Rating: 2/5</p>
                 </li>
                 </ul>
-            </div>
+
         </div>
-    
-
-
-
 
 
         <!-- notes footer -->
@@ -260,7 +254,7 @@
         </div>
     </section>
 
-    <!-- <script src="main.js"></script> -->
+    
 </body>
 
 </html>
