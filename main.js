@@ -29,23 +29,23 @@ function ready() {
 
     //   Adding new reviews to the DOM:
 
-  var form = document.getElementById("reviewForm");
-  form.addEventListener("submit", function(event) {
-    event.preventDefault();
+    var form = document.getElementById("reviewForm");
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    var name = document.getElementById("nameInput").value;
-    var rating = document.getElementById("ratingInput").value;
-    var comment = document.getElementById("commentInput").value;
+        var name = document.getElementById("nameInput").value;
+        var rating = document.getElementById("ratingInput").value;
+        var comment = document.getElementById("commentInput").value;
 
-    var review = new Review(name, rating, comment);
-    reviews.push(review);
+        var review = new Review(name, rating, comment);
+        reviews.push(review);
 
-  });
+    });
 
-  var button = document.getElementById("displayButton");
-  button.addEventListener("click", displayReviews);
-  // Show the initial list of coupons
-  showCouponList();
+    var button = document.getElementById("displayButton");
+    button.addEventListener("click", displayReviews);
+    // Show the initial list of coupons
+    showCouponList();
 }
 
 function purchaseClicked() {
@@ -136,74 +136,73 @@ function Review(name, rating, comment) {
     this.name = name;
     this.rating = rating;
     this.comment = comment;
-  }
+}
 
-  var reviews = [];
+var reviews = [];
 
-  function displayReviews() {
+function displayReviews() {
     var container = document.getElementById("reviewsContainer");
     var html = "<ul class='reviews-list'>";
-  
+
     for (var i = 0; i < reviews.length; i++) {
-      var review = reviews[i];
-      html += "<li><h3>" + review.name + "</h3><p>" + review.comment + "</p><p>Rating: " + review.rating + "/5</p></li>";
+        var review = reviews[i];
+        html += "<li><h3>" + review.name + "</h3><p>" + review.comment + "</p><p>Rating: " + review.rating + "/5</p></li>";
     }
-  
+
     html += "</ul>";
     container.innerHTML = html;
-  
+
     $(".reviews-list").listview();
-  }
+}
 
 
-  // Define the Coupon class
+// Define the Coupon class
 class Coupon {
     constructor(name, discount, expiration, code) {
-      this.ID = Math.random().toString(16).slice(5);
-      this.name = name;
-      this.discount = discount;
-      this.expiration = expiration;
-      this.code = code;
+        this.ID = Math.random().toString(16).slice(5);
+        this.name = name;
+        this.discount = discount;
+        this.expiration = expiration;
+        this.code = code;
     }
-  }
-  
-  // Define the coupons array
-  const coupons = [
+}
+
+// Define the coupons array
+const coupons = [
     new Coupon("Save $5 on your next purchase", "$5", "2/28/2023", "tAc8"),
     new Coupon("50% off any item", "50%", "3/31/2023", "fRb6"),
     new Coupon("Free shipping on orders over $50", "Free", "4/30/2023", "qXy3"),
-  ];
-  
-  // Define the function to display the list of coupons
-  function showCouponList() {
+];
+
+// Define the function to display the list of coupons
+function showCouponList() {
     const couponList = document.getElementById("coupon-list");
     couponList.innerHTML = "";
     coupons.forEach(coupon => {
-      const li = document.createElement("li");
-      li.textContent = coupon.name;
-      li.dataset.id = coupon.ID;
-      li.addEventListener("click", showCouponDetails);
-      couponList.appendChild(li);
+        const li = document.createElement("li");
+        li.textContent = coupon.name;
+        li.dataset.id = coupon.ID;
+        li.addEventListener("click", showCouponDetails);
+        couponList.appendChild(li);
     });
-  }
+}
 
-  
-  // Define the function to show coupon details
-  function showCouponDetails(event) {
+
+// Define the function to show coupon details
+function showCouponDetails(event) {
     const li = event.target.closest("li");
     if (li) {
-      const coupon = coupons.find(coupon => coupon.ID === li.dataset.id);
-      const couponCode = coupon.code;
-      const couponCodeElement = document.getElementById("coupon-code");
-      couponCodeElement.textContent = `Coupon Code: ${couponCode}`;
-      const couponDetailsSection = document.getElementById("coupon-details");
-      couponDetailsSection.style.display = "block";
-      const couponNameElement = document.getElementById("coupon-name");
-      couponNameElement.textContent = coupon.name;
-      const couponDiscountElement = document.getElementById("coupon-discount");
-      couponDiscountElement.textContent = `Discount: ${coupon.discount}`;
-      const couponExpirationElement = document.getElementById("coupon-expiration");
-      couponExpirationElement.textContent = `Expires: ${coupon.expiration}`;
+        const coupon = coupons.find(coupon => coupon.ID === li.dataset.id);
+        const couponCode = coupon.code;
+        const couponCodeElement = document.getElementById("coupon-code");
+        couponCodeElement.textContent = `Coupon Code: ${couponCode}`;
+        const couponDetailsSection = document.getElementById("coupon-details");
+        couponDetailsSection.style.display = "block";
+        const couponNameElement = document.getElementById("coupon-name");
+        couponNameElement.textContent = coupon.name;
+        const couponDiscountElement = document.getElementById("coupon-discount");
+        couponDiscountElement.textContent = `Discount: ${coupon.discount}`;
+        const couponExpirationElement = document.getElementById("coupon-expiration");
+        couponExpirationElement.textContent = `Expires: ${coupon.expiration}`;
     }
-  }
-  
+}
