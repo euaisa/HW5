@@ -82,30 +82,6 @@
                         <h4 class="shop-item-price" style="text-align: left;">$25.99</h4>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                         <a href="#reviews">Review this item</a>
-
-
-                        <!-- Create an icon next to each product witch a collapsible 
-                    functionality to be able to write the review in the products 
-                    page and send it to the reviews page. -->
-
-                        <!-- <div data-role="collapsible">
-                        <h4>Review this item</h4>
-                        <form>
-                            <div class="ui-field-contain">
-                                <label for="name">Name:</label>
-                                <input type="text" name="name" id="name">
-                            </div>
-                            <div class="ui-field-contain">
-                                <label for="review">Review:</label>
-                                <textarea name="review" id="review"></textarea>
-                            </div>
-                            <div class="ui-field-contain">
-                                <label for="rating">Rating:</label>
-                                <input type="range" name="rating" id="rating" min="1" max="5">
-                            </div>
-                            <input type="submit" value="Submit Review">
-                            </form>
-                      </div> -->
                     </div>
                 </div>
 
@@ -159,21 +135,7 @@
             </div>
         </div>
         <br>
-        <div>
-            <h1>Coupons</h1>
-            <ul id="coupon-list">
-                <li data-id="tAc8">Save $5 on your next purchase</li>
-                <li data-id="fRb6">50% off any item</li>
-                <li data-id="qXy3">Free shipping on orders over $50</li>
-            </ul>
-            <section id="coupon-details" style="display: none;">
-                <h2>Coupon Details</h2>
-                <p id="coupon-name"></p>
-                <p id="coupon-discount"></p>
-                <p id="coupon-expiration"></p>
-                <p id="coupon-code"></p>
-            </section>
-        </div>
+        
 
         <!-- notes footer -->
         <div data-role="footer" data-theme='b' id="footer">
@@ -212,9 +174,29 @@
                     <strong class="cart-total-title">Total</strong>
                     <span class="cart-total-price">$0</span>
                 </div>
+                <strong>Add coupom</strong>
+                <input type="text"></input>
                 <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
             </section>
         </div>
+
+        <div>
+            <h1>Coupons</h1>
+            <ul id="coupon-list">
+                <li data-id="tAc8">Save $5 on your next purchase</li>
+                <li data-id="fRb6">50% off any item</li>
+                <li data-id="qXy3">Free shipping on orders over $50</li>
+            </ul>
+            <section id="coupon-details" style="display: none;">
+                <h2>Coupon Details</h2>
+                <p id="coupon-name"></p>
+                <p id="coupon-discount"></p>
+                <p id="coupon-expiration"></p>
+                <p id="coupon-code"></p>
+            </section>
+        </div>
+
+
 
         <!-- notes footer -->
         <div data-role="footer" data-theme='b' id="footer">
