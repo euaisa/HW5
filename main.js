@@ -132,29 +132,54 @@ function updateCartTotal() {
 
 // Constructor function for creating the Review Objects:
 
-function Review(name, rating, comment) {
+function Review(name, rating, comment, product) {
     this.name = name;
     this.rating = rating;
     this.comment = comment;
-}
-
-var reviews = [];
-
-function displayReviews() {
+    this.product = product;
+  }
+  
+  var reviews = [];
+  
+  function addReview() {
+    var nameInput = document.getElementById("name");
+    var ratingInput = document.getElementById("rating");
+    var commentInput = document.getElementById("comment");
+    var productInput = document.getElementById("product");
+  
+    var name = nameInput.value;
+    var rating = parseInt(ratingInput.value);
+    var comment = commentInput.value;
+    var product = productInput.value;
+  
+    var review = new Review(name, rating, comment, product);
+    reviews.push(review);
+  
+    nameInput.value = "";
+    ratingInput.value = "";
+    commentInput.value = "";
+    productInput.value = "";
+  
+    displayReviews();
+  }
+  
+  
+  
+  function displayReviews() {
     var container = document.getElementById("reviewsContainer");
     var html = "<ul class='reviews-list'>";
-
+  
     for (var i = 0; i < reviews.length; i++) {
-        var review = reviews[i];
-        html += "<li><h3>" + review.name + "</h3><p>" + review.comment + "</p><p>Rating: " + review.rating + "/5</p></li>";
+      var review = reviews[i];
+      html += "<li><h3>" + review.name + "</h3><p>" + review.comment + "</p><p>Rating: " + review.rating + "/5</p><p>Product: " + review.product + "</p></li>";
     }
-
+  
     html += "</ul>";
     container.innerHTML = html;
-
+  
     $(".reviews-list").listview();
-}
-
+  }
+  
 
 // Define the Coupon class
 class Coupon {

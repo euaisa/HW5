@@ -225,8 +225,12 @@
 
         <div data-role="main" class="ui-content" data-theme='e'>
             <h1>Leave a review</h1>
-            <form id="reviewForm">
+            <form id="reviewForm" onsubmit="addReview(event);">
                 <div class="ui-field-contain">
+                    <label for="product">Product:</label>
+                    <input type="text" name="product" id="product">
+                </div>
+                <div class="ui-field-contain">    
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="nameInput">
                 </div>
@@ -240,27 +244,29 @@
                 </div>
                 <button id="displayButton">Submit Review</button>
             </form>
-
-
+        
+        
             <br>
-            <h2>Product Reviews</h2>
+            <h2>Reviews</h2>
             <div id="reviewsContainer"></div>
-
+        
             <ul data-role="listview">
                 <li>
                     <h3>John Doe</h3>
                     <p>This product is great! I highly recommend it.</p>
                     <p>Rating: 4/5</p>
+                    <p>Product: The Science T-shirt</p>
                 </li>
                 <li>
                     <h3>Jane Doe</h3>
                     <p>I wasn't impressed with this product. It's overpriced and not worth it.</p>
                     <p>Rating: 2/5</p>
+                    <p>Product: The Label T-shirt</p>
                 </li>
             </ul>
-
+        
         </div>
-
+        
 
         <!-- notes footer -->
         <div data-role="footer" data-theme='b' id="footer">
